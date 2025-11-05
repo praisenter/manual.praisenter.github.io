@@ -39,14 +39,13 @@ These minimum requirements help to ensure you can run Praisenter without issues,
 Some features that would benefit from better hardware are video processing & display and [NDI®](https://ndi.video/) output.
 
 ## Default Content[#](#default-content)
-Many competing software out there will be packaged with default content: video backgrounds, pictures, bibles, song books, etc.  Praisenter comes with minimal default content.  There are a few reasons for this, but the primary reasons are:
+Many competing softwares out there are packaged with default content: video backgrounds, pictures, bibles, song books, etc.  Praisenter comes with minimal default content (a few slide templates, a sample bible, and sample song lyrics).  There are a few reasons for this, but the primary reasons are:
 
-- Copyright law is a minefield and change per juristiction.  A great example of this is the KJV bible which is Public Domain in the United States, but Copyrighted by the Royal Crown in the United Kingdom.  Other content types like song lyrics, images, videos, and 
+- Copyright law is a minefield and changes based on the juristiction.  A great example of this is the KJV bible which is Public Domain in the United States, but Copyrighted by the Crown in the United Kingdom.  Other content types like song lyrics, images, videos, and 
 so on have similar issues.
 
 - Download size and clutter is a real thing.  Our goal was to provide the minimum necessary content to get started with Praisenter and
 allow each user to import the content they need.  Videos, images/pictures, and bibles can take up significant amount of the application
 size and Praisenter is already a pretty large download (~500 MB).
 
-- With our limited amount of time, we chose to focus on application features rather than content.  There's a lot of free content out there that can be imported.  If you are looking
-for more professional content, you can find those resources as well.
+- With our limited amount of time, we chose to focus on application features rather than content.  There's a lot of free content out there that can be imported.  If you are looking for more professional content, you can find those resources as well.
