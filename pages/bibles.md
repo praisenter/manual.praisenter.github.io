@@ -18,7 +18,7 @@ Praisenter doesn't come packaged with a bible, but you can import bibles from th
 - [Zefenia Bibles](https://sourceforge.net/projects/zefania-sharp/files/Bibles/)
 - [OpenSong Bibles](https://opensong.org/downloads/#bibles)
 
-> NOTE: Praisenter does not endorse these bibles or their contributors. Praisenter cannot guarantee the bibles offered on these sites to be accurate and cannot verify their content. Also consider their individual copyright notices before using or distributing them.
+> **NOTE**: Praisenter does not endorse these bibles or their contributors. Praisenter cannot guarantee the bibles offered on these sites to be accurate and cannot verify their content. Also consider their individual copyright notices before using or distributing them.
 
 ## Books / chapters / verses[#](#books--chapters--verses)
 Bibles are divided into books, and books are divided into chapters, and chapters are divided into verses.  This is a standard pattern instituted long ago to help with indexing, reference, research, studying, and so on.  This structure also helps when it comes to presenting Bible verses on the screen.
@@ -31,7 +31,7 @@ Each Bible should represent one _language_ or _translation_.  Doing so will allo
 
 The Bible is edited using a tree-like view (see the example above).  You can expand and collapse books and chapters to help find what you are looking for.  Clicking on each item in the view will allow you to edit it in the [Side Pane]({{ page.relpath }}pages/editing.html#side-pane) on the right.  As you click on each item in the view, toolbar and menu options will enable and disable.  For example, if you select a Chapter item, you can create a verse or a Chapter, but not a Book.  However, if you click on a book or the bible item, you _can_ create a book.
 
-> NOTE: You can also copy, cut, & paste books, chapters, and verses within a single bible or between bibles.
+> **NOTE**: You can also copy, cut, & paste books, chapters, and verses within a single bible or between bibles.
 
 ## Bulk edit[#](#bulk-edit)
 Editing a Bible by selecting and editing each item can be very tedious.  With that in mind Praisenter allows you to bulk edit Books and Chapters.  When bulk editing, the editor switches to a text view.  It's very important that you follow these guidelines when bulk editing to make sure that Praisenter can interpret your changes correctly.
@@ -40,7 +40,7 @@ You can trigger bulk editing by using the `Edit` -> `Bulk Edit` menu, the contex
 
 ![Bible book bulk edit]({{ page.relpath }}assets/img/bibles-bulk-edit.png){: .rounded .img-fluid}
 
-> NOTE: You cannot bulk edit an entire `Bible`.
+> **NOTE**: You cannot bulk edit an entire `Bible`.
 
 Here's an example of properly formatted text when bulk editing a `Book`:
 ```text

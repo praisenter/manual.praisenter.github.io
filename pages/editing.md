@@ -33,7 +33,7 @@ When editing an item, the toolbar at the top of the Editor will display actions 
 
 ![Editor toolbar]({{ page.relpath }}assets/img/editor-toolbar.png){: .rounded .img-fluid}
 
-> NOTE: The ![Editor toolbar arrow]({{ page.relpath }}assets/img/editor-toolbar-arrow.png){: .rounded} item at the end of the toolbar will contain actions that can't fit onto the toolbar give the size of the window.
+> **NOTE**: The ![Editor toolbar arrow]({{ page.relpath }}assets/img/editor-toolbar-arrow.png){: .rounded} item at the end of the toolbar will contain actions that can't fit onto the toolbar give the size of the window.
 
 In addition to the toolbar, many of these same actions are available from the `File`, `Edit`, and context menus.
 
@@ -51,9 +51,9 @@ As your editing your items, you'll want to make sure to save your work.  You can
 
 ![Editor unsaved changes prompt]({{ page.relpath }}assets/img/editor-unsaved-prompt.png){: .rounded .img-fluid}
 
-> NOTE: While editing, any item being presented will remain as-is.  The next _show_ action you take with that item should pick up any changes that have been saved.
+> **NOTE**: While editing, any item being presented will remain as-is.  The next _show_ action you take with that item should pick up any changes that have been saved.
 
-> A best practice with any application is to save often.
+> **NOTE**: A best practice with any application is to save often.
 
 ## Copy / cut / paste[#](#copy--cut--paste)
 When editing an item, you can copy, cut, and paste content. For example, imagine you are entering Song Lyrics and verse 1 and verse 2 are nearly identical - don't recreate verse 2 from scratch - copy and paste verse 1 and then modify the copy.  Another example is when you are editing multiple slides and you want some elements from Slide 1 on Slide 2, just select the elements and copy & paste them to Slide 2 - no need to recreate them.
@@ -66,7 +66,7 @@ Delete, however, works differently.  The Delete action now works on the element 
 ## Undo / redo[#](#undo--redo)
 All editors support undo and redo.  Undo allows you to back out the last change you made and redo allows you to reapply the last change you made.
 
-> NOTE: Once you close an editor all the undo and redo history is lost.
+> **NOTE**: Once you close an editor all the undo and redo history is lost.
 
 ## Hotkeys[#](#hotkeys)
 You can do everything with a mouse, but some actions are just easier with the keyboard.  With that in mind, Praisenter has hotkeys, or key combinations, to perform common actions:

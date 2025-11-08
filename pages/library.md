@@ -47,7 +47,7 @@ When selecting an item, a preview of the item is shown on the right side of the 
 - The date created / modified
 - Ability to add/remove tags
 
-> Some file types like video have the ability to preview them.  Be careful when previewing content with audio if you have your computer audio output on.
+> **NOTE**: Some file types like video have the ability to preview them.  Be careful when previewing content with audio if you have your computer audio output on.
 
 ![Library video preview]({{ page.relpath }}assets/img/library-preview-video.png){: .rounded .img-fluid}
 
@@ -82,7 +82,7 @@ After selecting item(s) (refer to the [Selecting an item](#selecting-an-item) an
 
 `Rename` is only available when selecting a single item.  When clicked you will be prompted to supply the new name for the item.
 
-> NOTE: You can also rename the item in the editor if it's a Bible, Song Lyrics, or Slide.
+> **NOTE**: You can also rename the item in the editor if it's a Bible, Song Lyrics, or Slide.
 
 ![Library rename item]({{ page.relpath }}assets/img/library-rename-prompt.png){: .rounded .img-fluid}
 
@@ -95,14 +95,14 @@ Since Praisenter comes with minimal content, it's a natural next step to need to
 
 If you have Praisenter full screen and don't want to drag-n-drop, you can use the `File` -> `Import` menu.
 
-> _What happens to the original files after import?_ Nothing.  The original files are left as-is.  When you import, the files are _copied_ to the Praisenter workspace, so you are free to move, delete, rename, etc. those original files.
+> **NOTE**: _What happens to the original files after import?_ Nothing.  The original files are left as-is.  When you import, the files are _copied_ to the Praisenter workspace, so you are free to move, delete, rename, etc. those original files.
 
 ![Library drag n drop import]({{ page.relpath }}assets/img/library-import-dnd.png){: .rounded .img-fluid}
 
 ## Supported import formats[#](#supported-import-formats)
 Praisenter supports a large number of formats.  Don't worry if you don't see the format you need, you have some other options when it comes to Bibles and Song lyrics.
 
-> Looking for an import format that's not currently provided?  [Log an issue on the project page](https://github.com/praisenter/praisenter/issues).
+> **NOTE**: Looking for an import format that's not currently provided?  [Log an issue on the project page](https://github.com/praisenter/praisenter/issues).
 
 #### Bibles
 - Praisenter format
@@ -149,14 +149,14 @@ Before being able to complete the export, you must choose the format that each c
 
 Finally, choose the export file name and location.
 
-> _What happens to the items after export?_ Nothing.  The items are left as-is.  The exported file(s) are copies of the items in the workspace - you can rename, delete, move, etc. the file(s) without impacting the items in the workspace.
+> **NOTE**: _What happens to the items after export?_ Nothing.  The items are left as-is.  The exported file(s) are copies of the items in the workspace - you can rename, delete, move, etc. the file(s) without impacting the items in the workspace.
 
 ![Library export choose formats]({{ page.relpath }}assets/img/library-export-formats.png){: .rounded .img-fluid}
 
 ## Supported export formats[#](#supported-export-formats)
 Praisenter supports a few different export formats in addition to it's native format.
 
-> Looking for an export format that's not currently provided?  [Log an issue on the project page](https://github.com/praisenter/praisenter/issues).
+> **NOTE**: Looking for an export format that's not currently provided?  [Log an issue on the project page](https://github.com/praisenter/praisenter/issues).
 
 #### Bibles
 - Praisenter format
