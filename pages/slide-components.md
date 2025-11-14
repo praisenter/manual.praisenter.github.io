@@ -24,7 +24,7 @@ To edit the text itself, you can find that in the [Side Pane]({{ page.relpath }}
 ## Placeholder component[#](#placeholder-component)
 The placeholder component is very similar to the text component - it's used to show text.  However, it's unique because the text is not directly editable.  Instead, the text that will show in the component will be determined during presentation.  It's a _placeholder_ for text.
 
-A placeholder component is used for displaying bible and song verses.  More on this in the Presentation part of the manual.  If a slide has any placeholder components, then it's considered a slide _template_.
+A placeholder component is used for displaying bible verses, song lyrics, and notifications.  More on this in the Presentation part of the manual.  If a slide has any placeholder components, then it's considered a slide _template_.
 
 ![Slides placeholder component]({{ page.relpath }}assets/img/slides-placeholder-component.png){: .rounded .img-fluid}
 
@@ -109,7 +109,7 @@ The countdown component is a lot like the date/time component, but where the dat
 
 ![Slides countdown component]({{ page.relpath }}assets/img/slides-countdown-component.png){: .rounded .img-fluid}
 
-The countdown component requires a _target_ date and time to countdown to.  This is great for events that may be upcoming on a specific date.  Just enter the date of the event (you can set the time to 00:00:00 to stop the countdown on the day of) and every time you show the slide, it will be counting down to that date.  No need to adjust the coundown, restart it, etc.
+The countdown component requires a _target_ date and time to countdown to.  This is great for events that may be upcoming on a specific date.  Just enter the date of the event (you can set the time to 00:00:00 to stop the countdown on the day of) and every time you show the slide, it will be counting down to that date.  No need to adjust the coundown, restart it, etc.  By default, the countdown halts when it reaches the target date/time.  You can turn this behavior off using the `Stop at zero` setting.  When this setting is off, the countdown will continue and will show negative values to indicate the target date/time has already passed.
 
 But what if I have a part of my service that we want to show a countdown for every time?  A good example of this is a countdown until 7 PM for when the service beings or a period of meet and greet.  To set a countdown for this use, toggle on the `Time only` setting and set the target time (the target date will be ignored).  Now the countdown component will countdown to the same time every time you show the slide.
 
@@ -148,9 +148,17 @@ You can also type in your own format.  Here are all the options available:
 ## Media component[#](#media-component)
 Media components are used to place pictures, images, video and audio onto a slide.  
 
+![Slides media]({{ page.relpath }}assets/img/slides-media.png){: .rounded .img-fluid}
+
 > **NOTE**: The _only_ way to add audio-only media to a slide is by using a Media component.  The other media types can be added as backgrounds on all components and slides.
 
-Click the `Browse...` button to select a media item from the Library.  Another way to add a media component is to drag-n-drop a file from your computer onto the slide.  Praisenter will import that file, then create a media component for it.
+Click the `Browse...` button to select a media item from the Library.  The library is filtered to only media items.  If you haven't imported the media yet, you can import it right here using drag-n-drop it from File Explorer.
+
+![Slides media selection]({{ page.relpath }}assets/img/slides-media-selection.png){: .rounded .img-fluid}
+
+After selecting a media item, the name of the selected media is shown under the `Browse...` button.
+
+Another way to add a media component is to drag-n-drop a file from your computer onto the slide.  Praisenter will import that file, then create a media component for it.
 
 > **NOTE**: When you drag-n-drop a file onto the slide it could take some time before the media component shows up on the slide - Praisenter has to process and optimize some media files like Video and Audio to ensure they can be played correctly.  Just be patient.
 

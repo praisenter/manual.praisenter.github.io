@@ -47,13 +47,15 @@ The Side Pane is a list of editable properties of the selected component.  For t
 Changes made in the Side Pane are applied immediately to the item so you can see the affect of the change right away.
 
 ## Saving changes[#](#saving-changes)
-As your editing your items, you'll want to make sure to save your work.  You can do this using the `File` -> `Save` or `File` -> `Save All` menu options or their [hotkeys](#hotkeys).  Praisenter does _not_ have an auto-save feature, but does go to great lengths to prevent any unsaved changes being lost.  As mentioned earlier, if you try to close the editor tab with unsaved changes, you will be prompted to save, discard or cancel.  If you try to close the application, a similar prompt is shown.
+As your editing your items, you'll want to make sure to save your work.  You can do this using the `File` -> `Save`, `File` -> `Save All`, or `File` -> `Save as...` menu options or their [hotkeys](#hotkeys).  Praisenter does _not_ have an auto-save feature, but does go to great lengths to prevent any unsaved changes being lost.  As mentioned earlier, if you try to close the editor tab with unsaved changes, you will be prompted to save, discard or cancel.  If you try to close the application, a similar prompt is shown.
 
 ![Editor unsaved changes prompt]({{ page.relpath }}assets/img/editor-unsaved-prompt.png){: .rounded .img-fluid}
 
 > **NOTE**: While editing, any item being presented will remain as-is.  The next _show_ action you take with that item should pick up any changes that have been saved.
 
 > **NOTE**: A best practice with any application is to save often.
+
+When using the `File` -> `Save as...` option, Praisenter will prompt you for a new name.  Once you supply a name, a new item is saved to the library and opened as a new tab in the editor.  The original item and any edits you made will still be present, so be sure to discard those changes and/or close the original so you don't keep editing that one.
 
 ## Copy / cut / paste[#](#copy--cut--paste)
 When editing an item, you can copy, cut, and paste content. For example, imagine you are entering Song Lyrics and verse 1 and verse 2 are nearly identical - don't recreate verse 2 from scratch - copy and paste verse 1 and then modify the copy.  Another example is when you are editing multiple slides and you want some elements from Slide 1 on Slide 2, just select the elements and copy & paste them to Slide 2 - no need to recreate them.

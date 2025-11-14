@@ -90,6 +90,19 @@ After selecting item(s) (refer to the [Selecting an item](#selecting-an-item) an
 
 ![Library delete confirmation]({{ page.relpath }}assets/img/library-delete-prompt.png){: .rounded .img-fluid}
 
+## Create Slide[#](#create-slide)
+A common ask is to quickly show a picture, image, or video in the presentation.  Praisenter requires the content to be placed on a [slide]({{ page.relpath }}pages/slides.html) before it can be presented.  To do this quickly, you can use the `+ Create Slide` context menu option to create a slide with the media on it, where you can save it, and then present it - just three steps.
+
+By default this feature will do the following:
+- Create a new slide sized for your primary screen/output
+- Set the slide name to "Untitled _the item name_"
+- Set the slide background to black
+- Add a [Media Component]({{ page.relpath }}pages/slide-components.html#media-component) to the slide with the selected item
+- Size the component to be full screen
+- Mark the media component to Keep aspect ratio
+
+![Library create slide]({{ page.relpath }}assets/img/library-create-slide.png){: .rounded .img-fluid}
+
 ## Importing content[#](#importing-content)
 Since Praisenter comes with minimal content, it's a natural next step to need to import content.  Importing content is easy - just drag the item you want imported onto the Praisenter window.  Select multiple items and drag-n-drop them into Praisenter to import multiple files at once.  Finally, you can also import `.zip` files containing any combination of the supported formats to import multiple items.
 
