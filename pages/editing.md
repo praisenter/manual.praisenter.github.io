@@ -6,7 +6,7 @@ layout: default
 title: Editing Items
 date: 2025-11-03 09:48:58 -0500
 
-relpath: /
+relpath: ../
 
 home_page: index.html
 quickstart_page: pages/quickstart.html
