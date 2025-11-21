@@ -7,6 +7,7 @@ title: Home
 date: 2025-11-03 09:48:58 -0500
 
 home_page: index.html
+quickstart_page: pages/quickstart.html
 bibles_page: pages/bibles.html
 displays_page: pages/displays.html
 editing_page: pages/editing.html

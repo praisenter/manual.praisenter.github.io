@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Library Management
+title: Quick Start
 date: 2025-11-03 09:48:58 -0500
 
 relpath: /
@@ -22,4 +22,4 @@ workspaces_page: pages/workspaces.html
 miscellaneous_page: pages/miscellaneous.html
 ---
 
-{% include library.md %}
+{% include quickstart.md %}

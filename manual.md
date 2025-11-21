@@ -7,6 +7,7 @@ title: Praisenter Manual
 date: 2025-11-03 09:48:58 -0500
 
 home_page: manual.html
+quickstart_page: manual.html
 bibles_page: manual.html
 displays_page: manual.html
 editing_page: manual.html
@@ -20,6 +21,10 @@ miscellaneous_page: manual.html
 ---
 
 {% include home.md %}
+
+---
+
+{% include quickstart.md %}
 
 ---
 
@@ -56,3 +61,7 @@ miscellaneous_page: manual.html
 ---
 
 {% include presenting.md %}
+
+---
+
+{% include miscellaneous.md %}
