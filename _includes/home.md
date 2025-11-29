@@ -1,6 +1,6 @@
 # Manual
 > Welcome to the manual, where you can get more information about Praisenter - how it works, features, settings, and more.
-You can find the latest documentation [online](https://manual.praisenter.github.io).
+You can find the latest documentation [online](https://manual.praisenter.org).
 {: .p-man-page-intro}
 
 Where to go for more help?  The best way to get help is to post on the [discussion board](https://github.com/praisenter/praisenter/discussions).  If you've found a bug or are having technical difficulty you can [submit an issue](https://github.com/praisenter/praisenter/issues) to the project team.
