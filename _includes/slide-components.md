@@ -2,42 +2,42 @@
 > Slides are made up of the slide itself and it's _slide components_.  Adding components to your slides is how you add media, text, and other content.
 {: .p-man-page-intro}
 
-Now that you've reviewed the [basics]({{ page.relpath }}{{ page.slides_page }}#slide-basics), we will introduce each component type available in Praisenter.  Then we'll cover how to move, resize, and layer them.
+Now that you've reviewed the [basics]({{ page.relpath }}{{ page.slides_page }}#slide-basics), we'll introduce each slide component available in Praisenter.  Then we'll cover how to move, resize, and layer them.
 
 ## Text component[#](#text-component)
-The text component is used to put static text on a slide and style that text.  You have all the options described in [Slide basics]({{ page.relpath }}{{ page.slides_page }}#slide-basics) to configure the font, color, borders, backgrounds and more.
+The text component is used to put unchanging text on a slide.  You have all the options described in [Slide basics]({{ page.relpath }}{{ page.slides_page }}#slide-basics) to configure the font, color, borders, backgrounds and more.
 
-To edit the text itself, you can find that in the [Side Pane]({{ page.relpath }}{{ page.editing_page }}#side-pane) on the right.
+To edit the text itself, use the [Side Pane]({{ page.relpath }}{{ page.editing_page }}#side-pane) on the right side of the editor.
 
 ![Slides text component]({{ page.relpath }}assets/img/slides-text-component.png){: .rounded .img-fluid}
 
 ## Placeholder component[#](#placeholder-component)
 The placeholder component is very similar to the text component - it's used to show text.  However, it's unique because the text is not directly editable.  Instead, the text that will show in the component will be determined during presentation.  It's a _placeholder_ for text.
 
-A placeholder component is used for displaying bible verses, song lyrics, and notifications.  More on this in the Presentation part of the manual.  If a slide has any placeholder components, then it's considered a slide _template_.
+A placeholder component is used to display Bible verses, song lyrics, and notifications.  More on this in the [presentation]({{ page.relpath }}{{ page.present_page }}#presenting) part of the manual.  If a slide has one or more placeholder components, then it's considered a _slide template_ and can be selected during Bible, song, and notification presentation.
 
 ![Slides placeholder component]({{ page.relpath }}assets/img/slides-placeholder-component.png){: .rounded .img-fluid}
 
 The placeholder component has two configuration options: the `Type` and the `Variant`.  
 
-The `Type` is either `Title` or `Text`.  This would correlate to the _reference_ and _text_ of a bible verse or the _verse name_ and _text_ of a song.  For example, for Genesis 1:1, the `Title` would be "Genesis 1:1" and the `Text` would be "In the beginning God created the heaven and the earth."  As a song example, the `Title` might be "Verse 1" and the `Text` would be "Amazing grace how sweet the sound That saved a wretch like me I once was lost but now am found Was blind but now I see".
+The `Type` is either `Title` or `Text`.  This corresponds to the _reference_ and _text_ of a Bible verse or the _verse name_ and _text_ of a song.  For example, when presenting Genesis 1:1, the `Title` will be "Genesis 1:1" and the `Text` will be "In the beginning God created the heaven and the earth."  Similarly, when presenting Verse 1 of the song Amazing Grace, the `Title` will be "Verse 1" and the `Text` will be "Amazing grace how sweet the sound That saved a wretch like me I once was lost but now am found Was blind but now I see."
 
-The `Variant` is one of 6 values.  At this time, Praisenter only uses `Primary` and `Secondary`.  This option represents whether to use the primary language/translation or secondary.  For example, if you want to show the _text_ of Genesis 1:1 from your primary bible, then you would choose `Primary`.  If you want to show the _text_ of Genesis 1:1 from your secondary bible, then you would choose `Secondary`.
+The `Variant` is one of six values.  At this time, Praisenter only uses `Primary` and `Secondary`.  This option represents whether to use the primary or secondary language/translation.  For example, if you want to show the _text_ of Genesis 1:1 from your primary bible, then you would choose `Primary`.  If you want to show the _text_ of Genesis 1:1 from your secondary bible, then you would choose `Secondary`.
 
-Adding multiple placeholder components onto a single slide allows you to build a slide that can show multiple languages at one time.  In the example below, there are three placeholder components, one on the top, one the left, and one on the right.
+Adding multiple placeholder components to a _single_ slide allows you to build a slide that can show multiple languages at one time.  In the example below, there are three placeholder components, one on the top, one the left, and one on the right.
 
-1. The one on the top is configured with `Type` = `Title` and `Variant` = `Primary` so that it shows the bible reference from the primary bible (KJV in this case).
-1. The one on the left is configured with `Type` = `Text` and `Variant` = `Primary` so that it shows the verse text from the primary bible (KJV in this case).
-1. The one on the right is configured with `Type` = `Text` and `Variant` = `Secondary` so that it shows the verse text from the secondary bible (one in arabic).
+1. The one on the top is configured with `Type` = `Title` and `Variant` = `Primary` so that it shows the Bible verse _reference_ from the _primary_ bible (KJV in this case).
+1. The one on the left is configured with `Type` = `Text` and `Variant` = `Primary` so that it shows the Bible verse _text_ from the _primary_ bible (KJV in this case).
+1. The one on the right is configured with `Type` = `Text` and `Variant` = `Secondary` so that it shows the Bible verse _text_ from the _secondary_ bible (one in arabic).
 
 ![Slides placeholder component example]({{ page.relpath }}assets/img/slides-placeholder-component-ex.png){: .rounded .img-fluid}
 
 ## Date/time component[#](#datetime-component)
-The date/time component is a special text component - it shows the current date and time.  You can configure all the properties just like a normal text component, but you cannot modify the text directly.  
+The date/time component is a special text component - it displays the current date and time.  You can configure all the properties just like a normal text component, but you cannot modify the text.  
 
 ![Slides date-time component]({{ page.relpath }}assets/img/slides-datetime-component.png){: .rounded .img-fluid}
 
-Instead of specifying the text, you configure the date-time format.  Praisenter has a list of default formats you can choose from, but you can type in your own format as well.  Here's what each format my look like for the time `2025-11-08 11:40:25 AM EST`:
+Instead of specifying the text, you configure the date-time format.  The date-time format controls what parts of the date/time to display and how to display them.  Praisenter has a list of default formats you can choose from, but you can type in your own format.  Here's what each format would look like for the time `2025-11-08 11:40:25 AM EST`:
 
 | Format | Output |
 |---|---|
@@ -52,7 +52,7 @@ Instead of specifying the text, you configure the date-time format.  Praisenter 
 | M/d/yyyy h:mm a z | 11/8/2025 11:40 AM EST |
 {: .table .w-auto}
 
-You can also type in your own format.  Here are all the options available:
+When typing in your own format, you have the following options available:
 
 | Option | Description | Output |
 |---|---|---|
@@ -83,7 +83,7 @@ You can also type in your own format.  Here are all the options available:
 | '' | Use two single quotes `''` to output a `'` | ' |
 {: .table .w-auto}
 
-Here's a few examples of custom formats for the date/time `2025-11-08 11:40:25 AM EST`:
+Here are a few examples of custom formats for the date/time `2025-11-08 11:40:25 AM EST`:
 
 | Format | Output |
 |---|---|
@@ -95,13 +95,13 @@ Here's a few examples of custom formats for the date/time `2025-11-08 11:40:25 A
 {: .table .w-auto}
 
 ## Countdown component[#](#countdown-component)
-The countdown component is a lot like the date/time component, but where the date/time component always shows the current date and time, the countdown component _counts down_ to a specific or relative date/time.
+The countdown component is a lot like the date/time component, but where the date/time component always shows the current date/time, the countdown component _counts down_ to a specific or relative date/time.
 
 ![Slides countdown component]({{ page.relpath }}assets/img/slides-countdown-component.png){: .rounded .img-fluid}
 
-The countdown component requires a _target_ date and time to countdown to.  This is great for events that may be upcoming on a specific date.  Just enter the date of the event (you can set the time to 00:00:00 to stop the countdown on the day of) and every time you show the slide, it will be counting down to that date.  No need to adjust the coundown, restart it, etc.  By default, the countdown halts when it reaches the target date/time.  You can turn this behavior off using the `Stop at zero` setting.  When this setting is off, the countdown will continue and will show negative values to indicate the target date/time has already passed.
+The countdown component requires a _target_ date and time to countdown to.  This is great for upcoming events on a specific date.  Just enter the date of the event (you can set the time to 00:00:00 to stop the countdown on the day of) and whenever the slide is displayed, the component will show the time remaining until that date.  No need to adjust the coundown, restart it, or anything - it does it automatically!  By default, the countdown halts when it reaches the target date/time.  You can turn this behavior off using the `Stop at zero` setting.  If `Stop at zero` is disabled, the countdown will continue and will show negative values to indicate the target date/time has already passed.
 
-But what if I have a part of my service that we want to show a countdown for every time?  A good example of this is a countdown until 7 PM for when the service beings or a period of meet and greet.  To set a countdown for this use, toggle on the `Time only` setting and set the target time (the target date will be ignored).  Now the countdown component will countdown to the same time every time you show the slide.
+Another common use for a countdown is for a recurring event, like the beginning of a weekly service. To configure the countdown component for this purpose, toggle on the `Time only` setting and set the target time (the target date will be ignored).  Now the countdown component will countdown to the same time every time you show the slide.
 
 Like the date/time component, you can format the output of the countdown component with one of the present formats or with your own.  For example, imagine it's 2025-11-08 12:34 PM and you are counting down to 2025-11-14 4:00 PM:
 
@@ -115,7 +115,7 @@ Like the date/time component, you can format the output of the countdown compone
 | ss | 53 |
 {: .table .w-auto}
 
-You can also type in your own format.  Here are all the options available:
+You can also type in your own format.  Here are all the available options:
 
 | Option | Description | Output |
 |---|---|---|
@@ -140,42 +140,42 @@ Media components are used to place pictures, images, video and audio onto a slid
 
 ![Slides media]({{ page.relpath }}assets/img/slides-media.png){: .rounded .img-fluid}
 
-> **NOTE**: The _only_ way to add audio-only media to a slide is by using a Media component.  The other media types can be added as backgrounds on all components and slides.
+> **NOTE**: The _only_ way to add audio media to a slide is by using a Media component.  Other media types can be added as backgrounds on all components and slides.
 
-Click the `Browse...` button to select a media item from the Library.  The library is filtered to only media items.  If you haven't imported the media yet, you can import it right here using drag-n-drop it from File Explorer.
+When you click the `Browse...` button, a filtered view of the library is displayed.  From here you can select a media asset.  If you haven't [imported]({{ page.relpath }}{{ page.library_page }}#importing-content) the media, you can import it here by drag-and-dropping it from File Explorer.
 
 ![Slides media selection]({{ page.relpath }}assets/img/slides-media-selection.png){: .rounded .img-fluid}
 
-After selecting a media item, the name of the selected media is shown under the `Browse...` button.
+After selecting a media asset, the name of the selected asset is shown under the `Browse...` button.
 
 Another way to add a media component is to drag-n-drop a file from your computer onto the slide.  Praisenter will import that file, then create a media component for it.
 
-> **NOTE**: When you drag-n-drop a file onto the slide it could take some time before the media component shows up on the slide - Praisenter has to process and optimize some media files like Video and Audio to ensure they can be played correctly.  Just be patient.
+> **NOTE**: When you drag-n-drop a file to import assets, it could take some time before the media component shows up on the slide.  Praisenter has to process and optimize some files (like video and audio) to ensure they can be played correctly.
 
-As described in [Slide basics - Media]({{ page.relpath }}{{ page.slides_page }}#media), depending on the type of media you add, you can adjust things like scaling, whether mute audio, color adjustments, and more.
+As described in [Slide basics - Media]({{ page.relpath }}{{ page.slides_page }}#media), depending on the type of media you add, you can adjust things like scaling, if audio should be muted, color adjustment, and more.
 
 ## Moving components[#](#moving-components)
-Once you add components to the slide, you'll probably want to move them around.  To move a component around, just hover the mouse over the component you want to move and wait for the mouse cursor to change to the Move icon.  Then, click and hold the mouse button while moving the mouse.  Release the mouse button when you are finished moving the component.
+To move a component around, hover the mouse over the component you want to move and wait for the mouse cursor to change to the move icon.  Then, click and hold the mouse button while moving the mouse.  Release the mouse button when you are finished moving the component.
 
 ## Sizing components[#](#sizing-components)
-Like moving components, sizing or resizing components uses the mouse.  In the corners and mid-points of the component you should see small white blocks.  Those white blocks are the sizing controls.  As you hover over a sizing control, the cursor will change to indicate what type of sizing operation it will do.  Then, click and hold the mouse button while moving the mouse to resize the component.  Release the mouse button when you are finished.
+When you have a component selected, small white blocks appear in the corners and mid-points of the component.  Those white blocks are the sizing control points.  As you hover over a sizing control, the cursor will change to indicate what type of sizing operation it performs.  To resize, click and hold the mouse button on a control point while moving the mouse.  Release the mouse button when you are finished.
 
 ![Slides resize component]({{ page.relpath }}assets/img/slides-resize-component.png){: .rounded .img-fluid}
 
 ## Snap to grid[#](#snap-to-grid)
-When moving and resizing components it's nice to be able to line things up perfectly.  To do that, you can can enable the `Snap to Grid` setting by using the toolbar or the menus.  Once enabled, you should see that resizing and moving components will _snap_ to specific grid points.
+When moving or resizing components, it can be difficult to line things up perfectly.  You can can enable the `Snap to Grid` setting by using the toolbar or the menus.  Once enabled, resizing and moving components will _snap_ to specific grid points.
 
-> **NOTE**: Unfortunately, Praisenter doesn't show the grid lines at this time.
+> **NOTE**: Praisenter does not show the grid lines at this time.
 
 ## Layers[#](#layers)
 As you add more components to your slide, they may overlap each other and being able to control what's on top is critical to getting the slide exactly the way you want it.  Praisenter has 4 commands to help with moving components up or down in the layers.
 
-- `Move up` - This will move a component up one layer
-- `Move down` - This will move a component down one layer
-- `Move front` - This will move the component to the top layer
-- `Move back` - This will move the component to the bottom layer
+- `Move up` - This will move a component up one layer.
+- `Move down` - This will move a component down one layer.
+- `Move front` - This will move the component to the top layer.
+- `Move back` - This will move the component to the bottom layer.
 
-These options are availabe in the `Edit` and context menus and also in the toolbar.
+These options are availabe in the `Edit` and context menus and in the toolbar.
 
 ## Copy / cut / paste  [#](#sc-copy-cut-paste)
 {: #sc-copy-cut-paste} 

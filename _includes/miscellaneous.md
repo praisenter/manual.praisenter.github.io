@@ -1,77 +1,70 @@
 # Miscellaneous
-> Praisenter has a set of default behaviors that can be changed (called Settings) and provides some feedback on actions being performed that you can send/use for troubleshooting issues.
+> Praisenter includes a configurable set of default behaviors (called Settings) and offers feedback on operations, which can be used for troubleshooting.
 {: .p-man-page-intro}
 
-Praisenter's default settings were chosen based on testing, experience, and most common usecase. You can change the behavior of the application using the settings and we'll walk you through each one below.  All settings are saved with the workspace, so each workspace can have different behavior.
+Praisenter's default settings were chosen based on testing, experience, and the most common use cases. You can customize the application's behavior via the settings tab.  Settings are saved per workspace, so each workspace can be configured to behave differently.
 
-> **NOTE**: Some settings are best left alone unless you really know what you are doing.  We'll call those out when we come to them.
+> **NOTE**: Some settings are best left unchanged unless you are familiar with what they do. We'll highlight those when we get to them.
 
 ![Miscellaneous settings]({{ page.relpath }}assets/img/misc-settings.png){: .rounded .img-fluid}
 
 ## General settings[#](#general-settings)
-These settings apply to the application.  Currently there are a few options: `Theme`, `Accent color`, `Language`, and `Debug Mode Enabled`.  We'll walk through each one separately.
+These settings affect the entire application. Currently, the available options are `Theme`, `Accent color`, `Language`, and `Debug Mode Enabled` - we'll describe each below.
 
 ![Miscellaneous general settings]({{ page.relpath }}assets/img/misc-settings-general.png){: .rounded .img-fluid}
 
-The `Theme` setting is used to change how you want Praisenter to look.  There are few themes available to choose from, each one having a light and dark mode.  Praisenter's default is `Primer Dark`.  We chose this to avoid eye strain and to reduce ambient light from the application.
+The `Theme` setting controls the overall appearance of Praisenter. There are several themes provided, each with light and dark variants. By default, Praisenter uses `Primer Dark`, chosen to reduce eye strain and minimize ambient light from the application.
 
-> **NOTE**:  The `Reload styles` button is there for users who are brave enough to alter how Praisenter looks.  Praisenter is styled using a CSS-like language.  Clicking the button on accident has no effect, so don't worry if you don't want to use this feature.
+> **NOTE**:  The `Reload styles` button exists for users who wish to customize the application's appearance. Praisenter uses a CSS-like styling system. Accidentally clicking this button does nothing harmful, so don't worry.
 
-The `Accent color` setting is used to highlight various elements within the application and draw your attention.  We recognize that some users may be color blind and using a fixed accent color could limit use.  Try the different accents and use whichever works best for you.  Currently, we offer `Blue`, `Purple`, `Pink`, `Orange`, `Green`, and `Yellow` accent colors.
+The `Accent color` setting determines the highlight color used throughout the interface to draw attention to UI elements. Because some users may have color-vision impairments, offering multiple accent options helps accessibility. The available accent colors are `Blue`, `Purple`, `Pink`, `Orange`, `Green`, and `Yellow`. Feel free to experiment and choose what works best for you.
 
-The `Language` setting is used change the language of the Praisenter.  Today, Praisenter is distributed in English only, but with enough knowledge you can add your own translations.
+The `Language` setting sets the language used throughout Praisenter. Currently, Praisenter is distributed in English only, but you can add your own translations if you like.
 
-> **NOTE**: To add your own translations, find the .Praisenter3 folder on your system and open the `locales` folder.  There's a `messages.properties` file there with all the English text that the application uses.  If you copy that document and translate the text after the `=` signs and place that file here, you can load it and run Praisenter in a different language.
+> **NOTE**: To add translations, locate the `.Praisenter3` folder on your system, open the `locales` subfolder, and find the `messages.properties` file containing the English interface text. Copy that file, translate the text after the `=` signs, and save it in the same folder.  The name of the file should follow the pattern `messages_lang.properties` where `lang` is the [IETF BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) for the language contained in the file.  For example, if you are creating a spanish file you would name it `messages_es.properties`.  After restarting Praisenter, you should be able to select the language for the file you created.
 
-The `Debug Mode Enable` setting allows you to get more feedback from the application as you are using it for troubleshooting.  For example, let's say you are having trouble importing a file or presenting a slide, turn this setting on to allow Praisenter to output more detail to the logs.  Then, upload or copy those logs in your error report.
+The `Debug Mode Enable` setting toggles extra logging and feedback from Praisenter, useful for troubleshooting. For instance, if you're having problems importing media or presenting slides, enable this setting and share the logs when reporting issues.
 
 ## Slide settings[#](#slide-settings)
-There are two settings for slide display.  These settings effect how slides are transitioned between each other when you are presenting slides to a display.
+There are two settings for slide display.  These settings effect how slides are transitioned during presentation.
 
 ![Miscellaneous slide settings]({{ page.relpath }}assets/img/misc-settings-slide.png){: .rounded .img-fluid}
 
-The `Wait for In-Progress Transitions to Complete` setting is used to control what you want to happen when you send slides to a display very quickly.  For example, imagine this scenario:
+The `Wait for In-Progress Transitions to Complete` setting determines what happens if you queue up a new slide while a current slide is still transitioning. Suppose you click `Show` for `Slide A` (which has a 5-second transition), then quickly click `Show` for `Slide B` before the first transition finishes. With this setting, you can choose whether to:
 
-- You click the `Show` button to show `Slide A`.  Slide A has a slide transition that takes 5 seconds to complete
-- You realize you didn't want to show Slide A, but instead want to show Slide B
-- You click the `Show` button to show `Slide B`.  If the transition of Slide A hasn't completely finished, what should Praisenter do?
+- Wait for `Slide A` transition to finish before showing `Slide B`.
+- Immediately cancel `Slide A` transition and switch to `Slide B`.
 
-This setting has two options, either wait for Slide A's transition to complete, then show Slide B OR immediately stop Slide A's transition and start showing Slide B.  By default, Praisenter will stop Slide A and start showing Slide B.
+By default, Praisenter cancels the transition of `Slide A` and immediately shows `Slide B`.
 
-The `Placeholder Transition Behavior` setting is used to control how placeholders, content, and the background of slides are transitioned when those slides include [placeholder components]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component).  For example, imagine this scenario:
+The `Placeholder Transition Behavior` setting controls how placeholders, static content, and backgrounds transition when using slides with placeholder components. For example, if you're showing a Bible verse slide with a video background, placeholder text, and perhaps a static image/icon, this setting determines what animates when you move to the next slide:
 
-You are showing a Bible verse using Slide A.  Slide A has placeholder components for the verse Reference and the verse Text.  It also has a video background and maybe one other _static_ component like an image or icon.  When you try to show the _next verse_, Praisenter has to decided _what_ to transition.  For example, should it stop the video background and slide in a new version of Slide A where the video has restarted?  Should Praisenter only swap out the placeholders or should it also swap out the image/icon?
-
-That's where this setting comes in.  The behavior of each option is described below referencing the example described above:
-
-- `Placeholders only` - Only the Bible reference and text are transitioned.  The video background stays where it is and continues to play.  The image/icon will stay where it is as well.
-- `All content` - The Bible reference and text are transitioned, but the image/icon is as well.  However, the video background stays where it is and continues to play.
-- `Entire slide` - Everything transitions, as if it was an entirely different slide.  The video will be stopped and restarted.
+- `Placeholders only` - Only the placeholder components are transitioned.  Video backgrounds continue to play and static images/text remain as-is.
+- `All content` - Placeholder components _and_ static images/text are transitioned.  However, backgrounds remain unchanged.
+- `Entire slide` - Everything transitions: placeholders, static images/text, backgrounds, everything.  If the background is a video, the video is stopped and restarted.
 
 ## Bible settings[#](#bible-settings)
-The settings in this section control whether a confirmation window is shown when you use the `Sort by number` and `Number by order` features.  You are asked in the application if you want to see these confirmations in the future and you can come here to re-enable them if you find the confirmation a good way to avoid performing these commands accidentally.
+These settings let you control whether confirmation dialogs appear when using the `Sort by number` and `Number by order` features. When you use those features, the application may ask if you want to continue — and you can re-enable those confirmations here if you previously disabled them.
 
 ![Miscellaneous bible settings]({{ page.relpath }}assets/img/misc-settings-bible.png){: .rounded .img-fluid}
 
 ## Media settings[#](#media-settings)
-These settings apply to different types of media.  As of 3.1.7, these settings only apply to media with audio (audio and video).  These settings are here to help adjust the volume of audio and video files during the _import_ process.  Praisenter will use [FFmpeg](https://ffmpeg.org/) to detect the `mean_volume` and then adjust the volume during transcoding to the given target volume (in dB).  The volume adjustment will only happen if the `mean_volume` is greater than the target volume.
-
-If you find you are having issues with volume, try turning this feature off and re-importing the media.
+Media-related settings apply when importing audio or video files. As of version 3.1.7, these settings only affect media that includes audio. When you import such media, Praisenter uses [FFmpeg](https://ffmpeg.org/) to detect the audio `mean_volume` - and if the volume exceeds the configured target (in dB), it will automatically adjust it during transcoding. If you encounter volume problems, try disabling this feature and re-import your media.
 
 ![Miscellaneous media settings]({{ page.relpath }}assets/img/misc-settings-media.png){: .rounded .img-fluid}
 
 ## Audio settings[#](#audio-settings)
-These settings only apply to _Audio_ media.  While presenting audio-only media is rare (there are many other ways to play audio media outside of Praisenter that give you far better control), Praisenter does support audio playback.  Similarly to Video media, Praisenter will _transcode_ the audio file to a supported format during import.  The settings below control this behavior.
+These settings only apply to _audio_ media. While you might rarely present audio-only media using Praisenter (other tools offer more control) - Praisenter still supports it. Similar to video, imported audio is [transcoded](https://en.wikipedia.org/wiki/Transcoding) to a format that Praisenter natively play. The relevant settings are:
 
-> **NOTE**: Praisenter supports many, many audio formats. It does this by _transcoding_ the format supplied into a standard format that Praisenter can natively play.  Praisenter natively supports the formats [listed here](https://openjfx.io/javadoc/25/javafx.media/javafx/scene/media/package-summary.html).
+> **NOTE**: Since media is [transcoded](https://en.wikipedia.org/wiki/Transcoding), Praisenter supports a wide array of formats.  However, if you choose to disable transcoding, Praisenter natively supports the following formats [listed here](https://openjfx.io/javadoc/25/javafx.media/javafx/scene/media/package-summary.html).
 
 ![Miscellaneous audio settings]({{ page.relpath }}assets/img/misc-settings-audio.png){: .rounded .img-fluid}
 
-- `Transcode Audio` - You can turn off transcoding, but be aware that Praisenter doesn't support all audio formats.
-- `Audio File Transcode Extension` - This setting is here if you have issues with transcoding to the Praisenter default format `m4a`.  Again, be careful what you change here - Praisenter doesn't support all audio formats.
-- `Audio File Transcode Command` - This setting is here if you have knowledge of transcoding and [FFmpeg](https://ffmpeg.org/) and would like to alter how Praisenter transcodes the audio during import.
+- `Transcode Audio` - You may disable automatic transcoding; but if you do, be aware that Praisenter may not support the native format of your audio file.
+- `Audio File Transcode Extension` - Lets you select the file extension for the target format (the default is `m4a`). If you change this, make sure the resulting format is supported by Praisenter natively.
+- `Audio File Transcode Command` - Allows advanced users familiar with [FFmpeg](https://ffmpeg.org/) to customize exactly how the audio is transcoded during import.
 
-> **NOTE**: These settings are pretty dangerous so be very careful when changing these.  If you find you've messed something up or things are importing correctly, just revert to the defaults:
+> **NOTE**: These settings can cause problems if misconfigured. If audio import or playback fails or behaves unexpectedly, revert to the defaults listed below:
 
 | Setting | Default Value |
 |---|---|
@@ -80,18 +73,18 @@ These settings only apply to _Audio_ media.  While presenting audio-only media i
 {: .table .w-auto}
 
 ## Video settings[#](#video-settings)
-These settings only apply to _Video_ media.  During import of video media, Praisenter will _transcode_ the video file to a supported format to ensure the best video playback when used.  The settings below control this behavior.
+These settings only apply to _video_ media.  During import of video media, Praisenter will [transcode](https://en.wikipedia.org/wiki/Transcoding) the video file to a supported format to ensure the best video playback when used.  The settings below control this behavior.
 
-> **NOTE**: Praisenter supports many, many video formats. It does this by _transcoding_ the format supplied into a standard format that Praisenter can natively play.  Praisenter natively supports the formats [listed here](https://openjfx.io/javadoc/25/javafx.media/javafx/scene/media/package-summary.html).
+> **NOTE**: Since media is [transcoded](https://en.wikipedia.org/wiki/Transcoding), Praisenter supports a wide array of formats.  However, if you choose to disable transcoding, Praisenter natively supports the following formats [listed here](https://openjfx.io/javadoc/25/javafx.media/javafx/scene/media/package-summary.html).
 
 ![Miscellaneous video settings]({{ page.relpath }}assets/img/misc-settings-video.png){: .rounded .img-fluid}
 
-- `Transcode Video` - You can turn off transcoding, but be aware that Praisenter doesn't support all video formats.
-- `Video File Transcode Extension` - This setting is here if you have issues with transcoding to the Praisenter default format `mp4`.  Again, be careful what you change here - Praisenter doesn't support all video formats.
-- `Video File Transcode Command` - This setting is here if you have knowledge of transcoding and [FFmpeg](https://ffmpeg.org/) and would like to alter how Praisenter transcodes the video during import.
-- `Video Thumbnail Extract Command` - When importing a video file, Praisenter will extract one frame from the video to use for as thumbnail and for previewing the video without playing it.  This setting can be used to adjust the [FFmpeg](https://ffmpeg.org/) command that is used to perform this task.
+- `Transcode Video` - You may disable automatic transcoding; but if you do, be aware that Praisenter may not support the native format of your video file.
+- `Video File Transcode Extension` - Lets you select the file extension for the target format (the default is `mp4`). If you change this, make sure the resulting format is supported by Praisenter natively.
+- `Video File Transcode Command` - Allows advanced users familiar with [FFmpeg](https://ffmpeg.org/) to customize exactly how the video is transcoded during import.
+- `Video Thumbnail Extract Command` - Controls how a thumbnail is generated for previewing videos.  Allows advanced users familiar with [FFmpeg](https://ffmpeg.org/) to customize exactly how to perform this task.
 
-> **NOTE**: These settings are pretty dangerous so be very careful when changing these.  If you find you've messed something up or things are importing correctly, just revert to the defaults:
+> **NOTE**: These settings can cause problems if misconfigured. If audio import or playback fails or behaves unexpectedly, revert to the defaults listed below:
 
 | Setting | Default Value |
 |---|---|
@@ -101,51 +94,54 @@ These settings only apply to _Video_ media.  During import of video media, Prais
 {: .table .w-auto}
 
 ## NDI® settings[#](#ndi-settings)
-[NDI®](https://ndi.video/) stands for Network Device Interface, a software standard for transmitting video and audio over an IP network. This is especially useful for sending content to another application like [OBS](https://obsproject.com/) to combine, overlay, merge, etc. different content into a single or multiple displays.  Praisenter allows you to create NDI® displays and have content sent there. 
+[NDI®](https://ndi.video/), short for Network Device Interface, is a software standard for transmitting video and audio over an IP network. Creating an NDI® output is useful when using another application, like [OBS](https://obsproject.com/), to combine, overlay, and merge content coming from many sources.  For instance - you may have a live video feed coming from a camera that you'd like to overlay with some content from Praisenter.
+
+> **NOTE**: NDI® is a registered trademark of Vizrt NDI AB
 
 ![Miscellaneous NDI settings]({{ page.relpath }}assets/img/misc-settings-ndi.png){: .rounded .img-fluid}
 
-When you setup an [NDI®](https://ndi.video/) display you specify the frames per second for that display.  That setting defines the number of frames per second to _capture_.  The setting here is how many frames to _send_.  This setting needs to be set higher than the setting at the display level.  Adusting this setting can have a performance impact and the default value of `60` is usually the best balance of performance and quality.
+When you configure an [NDI®](https://ndi.video/) display you assign a "frames per second" (FPS) _capture_ rate for that display. This setting controls how many frames Praisenter will _transmit_, which must be higher than the display's _capture_ rate. Changing this setting can affect performance. The default value of `60` FPS is typically a good balance between performance and quality.
 
-The `Enable Render Optimizations` setting is here to control whether Praisenter performs render optimizations or not.  With this setting enabled, Praisenter will analyze the currently presenting content on the [NDI®](https://ndi.video/) display and determine whether it can skip _capturing_ of frames.  Praisenter will detect situations that require frames to be captured, when playing a video or a slide transitioning in or out, and situtations where the content is not changing like an image or text only slide.  This can have a large positive impact on performance so leaving it on is recommended, but you can disable this optimization if you are having trouble.
+The `Enable Render Optimizations` setting toggles whether Praisenter analyzes the content currently being displayed over [NDI®](https://ndi.video/). If the content isn't changing (e.g. static image or text), it will skip sending redundant frames - which can significantly improve performance. This optimization is enabled by default and recommended; but you may turn it off if you encounter problems.
+
 
 ## Zoom[#](#zoom)
-Under the `Window` menu, there are a few options for `Zoom`.  The zoom feature in Praisenter controls how small or big you want the application text, icons, buttons, spacing, and so on.  This can be helpful to fit more on your screen (by zooming out) or to make buttons and other interaction elements bigger for better visibility or touch screen use (by zooming in).  You can reset the zoom to the default using the `Reset Zoom` menu item.
+The Zoom feature (available under the `Window` menu) lets you scale the application interface: you can zoom out to display more content on screen, or zoom in to enlarge text, buttons, and controls - useful for better visibility or for touch-screen use. If you want to go back to the original interface size, use the `Reset Zoom` menu command.
 
 ![Miscellaneous zoom]({{ page.relpath }}assets/img/misc-zoom.png){: .rounded .img-fluid}
 
 ## Task log[#](#task-log)
-As you are performing actions in Praisenter, some of those actions will be collected and reported in the `Task Log`.  The Task Log can give you feedback on any action you may have taken in the past or any actions that are currently pending.  A good example of this is audio / video imports - they can take a long time (a few minutes or more in some cases) and having some feedback that it's still in progress is important.  
+As you perform actions in Praisenter (e.g. importing audio/video), they are recorded in the Task Log, which provides feedback on past or pending operations.  This is especially useful when tasks take time (like media import). The Task Log records:
+
+- `Name` - A description of the task.
+- `Operation` - The kind of action performed (e.g. Save, Import).
+- `Type` - The item type the task operated on (e.g. Bible, Song Lyrics, or the file's [MIME type](https://en.wikipedia.org/wiki/Media_type)).
+- `Status` - The current or final state of the task. Options: _In Progress_, _Success_, or _Failed_.
+- `Duration` - How long the task took.
+- `Description` - A human-friendly description of the operation (e.g. "Saving TEST Bible").
+- `Error Message` - If the task failed, the error message.
 
 ![Miscellaneous task log]({{ page.relpath }}assets/img/misc-task-log.png){: .rounded .img-fluid}
 
-The log will track a few key data points:
-
-- `Name` - This can be anything that describes the task that occurred.
-- `Operation` - This is the type of action that was performed.  Save, Import, etc.
-- `Type` - This is the type of item the task operated on.  Bible, Song Lyrics, etc. or the mimetype of the file.
-- `Status` - This is the current status / final status of the task.  There are only three options: In Progress, Success, or Failed.
-- `Duration` - This is how long the task took to complete.
-- `Description` - This is the friendly message for the operation.  Something like "Saving TEST Bible".
-- `Error Message` - This is the error that occurred when the operation failed.
-
-If a task fails, you should see a copy button.  You can use this button to copy the error message to report on the Praisenter discussions board.
+If a task fails, a `copy` button appears - you can use it to copy the error message for reporting the error (e.g. on the Praisenter discussion board).
 
 ![Miscellaneous task log]({{ page.relpath }}assets/img/misc-task-log-error.png){: .rounded .img-fluid}
 
-> **NOTE**: The information stored in the Task Log is not saved and will be cleared when you close Praisenter.
+> **NOTE**: Task Log entries are not saved permanently - the log clears when you close Praisenter.
 
 ## Log files[#](#log-files)
-Under the `Help` menu item there are two options for logs: `Application Logs` and `Workspace Logs`.  These options will open a File Explorer window to where the log files are stored.  If you are having trouble with Praisenter, these file may contain more information about the issue and would be crucial to share when reporting an issue.
+Under the `Help` menu, you can access two kinds of logs: `Application Logs` and `Workspace Logs`. Selecting these will open a File Explorer window at the location where the logs are stored. These files may contain useful information if you're experiencing problems with Praisenter - and are often necessary when reporting issues.
 
 ![Miscellaneous log files]({{ page.relpath }}assets/img/misc-help.png){: .rounded .img-fluid}
 
 ## Check for update[#](#check-for-update)
-Found in the `Help` menu, the `Check for Update` option allows you to see if you have the latest version of Praisenter or not.  You must have internet connectivity for the check to succeed.  If installed Praisenter from the [Microsoft Store](https://apps.microsoft.com/detail/Praisenter/9PHHWB94W800?launch=true&mode=mini) or [Snap Store](https://snapcraft.io/praisenter), then you should always have the latest version, provided you have internet connectivity.  If you installed Praisenter manually using an MSI or DEB, then you will need to make sure you re-install to get the latest features and fixes.
+The `Check for Update` command (found under the `Help` menu) lets you check if you are using the latest version of Praisenter.  An internet connection is required for this operation. If you installed Praisenter from the [Microsoft Store](https://apps.microsoft.com/detail/Praisenter/9PHHWB94W800?launch=true&mode=mini) or [Snap Store](https://snapcraft.io/praisenter), you will automatically get updates (assuming you are connected to the internet). If you installed via an `MSI` or `DEB`, you must manually re-install when a new version is released.
+
+> **NOTE**: Installing from the [Microsoft Store](https://apps.microsoft.com/detail/Praisenter/9PHHWB94W800?launch=true&mode=mini) or [Snap Store](https://snapcraft.io/praisenter) ensures that you get a legitimate copy of Praisenter - never download Praisenter from any site other than the official [github page](https://github.com/praisenter/praisenter/releases).
 
 ![Miscellaneous check for update]({{ page.relpath }}assets/img/misc-check-for-update.png){: .rounded .img-fluid}
 
 ## About[#](#about)
-The `About` menu under `Help` provides a little more detail on the version of Praisenter you have.  These details can be helpful when reporting an issue.
+The `About` command (under the `Help` menu) gives details about your currently installed version of Praisenter - this information is useful when reporting problems or checking whether you are up to date.
 
 ![Miscellaneous about]({{ page.relpath }}assets/img/misc-about.png){: .rounded .img-fluid}

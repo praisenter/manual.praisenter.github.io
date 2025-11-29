@@ -1,12 +1,12 @@
 # Manual
-> Welcome to the manual where you can get more information about Praisenter, how it works, features, restrictions and more.
-Please note that the latest documentation is [available online](https://manual.praisenter.github.io).
+> Welcome to the manual, where you can get more information about Praisenter - how it works, features, settings, and more.
+You can find the latest documentation [online](https://manual.praisenter.github.io).
 {: .p-man-page-intro}
 
 Where to go for more help?  The best way to get help is to post on the [discussion board](https://github.com/praisenter/praisenter/discussions).  If you've found a bug or are having technical difficulty you can [submit an issue](https://github.com/praisenter/praisenter/issues) to the project team.
 
 ## About[#](#about)
-Praisenter is a free application used to manage presentations with a focus on churches.  You can use Praisenter to display
+Praisenter is a free application designed to manage presentations, with a focus on churches.  You can use Praisenter to display
 pictures, videos, text, and more to one or more output devices (TVs, monitors, projectors, etc.)
 
 Praisenter was created by a small team of contributors that had used both free and professional software in the past.  While
@@ -18,9 +18,9 @@ Praisenter is free software which means you don't have to pay anything to use it
 can use it on nor any restrictions on who can use it.  If you are savvy enough, you can even modify Praisenter and submit those as
 features to have added to the application.
 
-That said, Praisenter does have a [license](https://github.com/praisenter/praisenter/blob/master/LICENSE.md) that details your rights with the application.  In short, the license is stating that it comes as-is with no guarantee or warranty and that the organization and individuals involved are not liable for any damages.
+Praisenter is distributed with a [license](https://github.com/praisenter/praisenter/blob/master/LICENSE.md) that details your rights with the application.  In short, the license states that the software is provided "as-is" with no guarantee or warranty, and that neither the organization nor the individuals involved are liable for any damages.
 
-## Minimum Requirements[#](#minimum-requirements)
+## Minimum requirements[#](#minimum-requirements)
 The minimum requirements to run Praisenter are:
 - Windows x64 10 22H2 or higher OR Ubuntu 22.04 x64 or higher
 - 4GB or more
@@ -31,11 +31,14 @@ These minimum requirements help to ensure you can run Praisenter without issues,
 
 Some features that would benefit from better hardware are video processing & display and [NDI®](https://ndi.video/) output.
 
-## Default Content[#](#default-content)
-Many competing softwares out there are packaged with default content: video backgrounds, pictures, bibles, song books, etc.  Praisenter comes with minimal default content (a few slide templates, a sample bible, and sample song lyrics).  There are a few reasons for this, but the primary reasons are:
+> **NOTE**: NDI® is a registered trademark of Vizrt NDI AB
 
-- Copyright law is a minefield which changes based on the juristiction.  A great example of this is the KJV bible which is Public Domain in the United States, but Copyrighted by the Crown in the United Kingdom.  Other content types like song lyrics, images, videos, and so on have similar issues.
+## Default assets[#](#default-content)
+{: #default-content}
+Many competing application are packaged with default assets - things like video backgrounds, pictures, Bibles, songbooks, etc.  Praisenter comes with minimal default assets (a few slide templates, a sample Bible, and sample song lyrics).  There are a few reasons for this, but the primary reasons are:
 
-- Download size and clutter is a real thing.  Our goal was to provide the minimum necessary content to get started with Praisenter and allow each user to import the content they need.  Videos, images/pictures, and bibles can take up a significant amount of storage space and Praisenter is already a pretty large download (~500 MB).
+- Copyright law is a minefield which changes based on the juristiction.  For example, the KJV bible is Public Domain in the United States, but copyrighted by the Crown in the United Kingdom.  Other asset types like song lyrics, images, videos, and so on have similar issues.
 
-- With our limited amount of time, we're choosing to focus on application features rather than content.  There's a lot of free content out there that can be imported.  If you are looking for more professional content, you can find those resources as well.
+- Download size and clutter is a real thing.  Our goal was to provide the minimum necessary assets to get started with Praisenter and allow each user to import the assets they need.  Videos, images/pictures, and Bibles can take up a significant amount of storage space and Praisenter is already a pretty large download (~500 MB).
+
+- With our limited amount of time, we're choosing to focus on application features rather than assets.  There's a lot of free assets out there that can be imported.  If you are looking for more professional assets, you can find those resources as well.

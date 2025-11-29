@@ -1,198 +1,194 @@
 # Presenting
-> Presenting is how you show content on a screen, projector, TV, etc. and manage that content over the duration of a service.
+> Presenting is how you show content on a screen, projector, TV, etc., and manage that content over the duration of a service.
 {: .p-man-page-intro}
 
-All presentation control is handled from the Present tab on the left navigation.  It's the first place you will see after selecting a workspace.  From here, you can control everything around presentation, displays, queues, and more.  To review, each display you have configured is given it's own _display controller_ to control the content being presented to that display.  The below screenshot represents ONE display controller.  We'll go through each element of the display controller and explain it's function and call out any features.
+All presentation control is handled from the Present tab on the left navigation.  It's the first place you will see after selecting a workspace.  From here, you can control everything related to presenting - displays, queues, and more.  Each display you have configured is assigned it's own [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers) where you can _control_ the content shown on that display.  In this section of the manual, we'll dive into each part of the display controller.
 
 ![presentation display controller]({{ page.relpath }}assets/img/present-display-controller.png){: .rounded .img-fluid}
 
 ## Slide preview[#](#slide-preview)
-Each _display controller_ has a slide preview.  It's the rectangle at the top of the controller that shows the slide before you present it.  The slide preview will be updated based on the actions you take on the display controller.  You must have a preview before you can show anything.
+Each [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers) has a slide preview: the rectangle at the top of the controller that shows a slide before you present it.  The preview will update based on your actions in the display controller.  You must have a preview before you can show anything.
 
 ![presentation slide preview]({{ page.relpath }}assets/img/present-slide-preview.png){: .rounded .img-fluid}
 
 ## Show / hide[#](#show--hide)
-Under the slide preview, there are two large buttons: `Show` and `Hide`.  These are your main controls for sending and clearing content from the attached display.  As mentioned above, you must have a slide preview before you can send content.
+Beneath the slide preview are two large buttons: `Show` and `Hide`.  These are your main controls for sending contact to - or clearing content from - the attached display.  As mentioned above, you must have a slide preview before you can send content.
 
-When you use the `Show` button, Praisenter will take the slide you have prepared in the preview, use it's transition, and show it on the display.  There are some interesting details in this one button that you should keep in mind:
+When you click `Show`, Praisenter takes the slide from the preview, uses its transition, and displays it.  There are a few details to keep in mind:
 
-- If a slide is currently displayed, it will be transitioned away using the transition of the new slide.
-- If a slide is currently displayed, and that slide and the new slide are the same, Praisenter will attempt to transition the placeholder content of the slide only.  The background and other static content like pictures and videos will NOT transition.  This is the default, but it can be changed in the settings.
-- If a slide is currently being transitioned in and you click the show button again, Praisenter will stop the current transition, and start a new transition with the new slide.  This is the default, but it can be changed in the settings as well.
+- If a slide is already displayed, it will be transitioned away using the transition of the new slide.
+- If the currently displayed slide and the new slide are the same, Praisenter will transition only the placeholder content, while the background and static elements (such as images or videos) remain unchanged.  This behavior can be modifed in the [settings]({{ page.relpath }}{{ page.miscellaneous_page }}#slide-settings).
+- If a slide is in the middle of transitioning in and you click `Show` again, Praisenter cancel the current transition and begin the new slide transition immediately.  This can also be changed in the [settings]({{ page.relpath }}{{ page.miscellaneous_page }}#slide-settings).
 
-The standard process of showing content on a display is to select the tab for the content to display: `Bibles`, `Song Lyrics`, `Slides`, or `Notifications` (more on these later), use the controls in the tab to _preview_ a slide, then click the `Show` button.
+The usual workflow is:
 
-When you use the `Hide` button, Praisenter will use the transition on the currently displayed slide to transition it out.  Clicking `Hide` when nothing is displayed will have no effect.
+1. Choose the type of content you want to show by clicking one of the tabs: `Bibles`, `Song Lyrics`, `Slides`, or `Notifications` (more on these later).
+2. Use the controls in the tab to _preview_ a slide.
+3. Click `Show`.
+
+The `Hide` button is used to clear any content currently being displayed.  When you click `Hide`, Praisenter will use the transition of the currently displayed slide to animated it out.  Clicking `Hide` when nothing is displayed has no effect.
 
 ## Preview Transition[#](#preview-transition)
-The `Preview Transition` option allows you to see the transition of the slide before showing the slide on the display.  If the slide doesn't have a transition set, then it shows the preview as if this option was disabled.  This can be useful when you aren't sure how the slides will perform or you aren't sure if you configured the placeholders correctly.
+The `Preview Transition` toggle lets you preview the slide's transition before sending the slide to the display.  If the slide has no transition defined, then the preview shows the slide as if this setting was disabled.  This is useful to observe the behavior when transitioning between two slides with the same or different content.
 
 ## Auto-show[#](#auto-show)
-The `auto-show` toggle is used to automatically show the slides on the display.  This can be a very useful feature when you are following along in the reading of a Bible verse or song lyrics.  For example, if you want to show the next Bible verse, you need to use the `>>` button, then click the `Show` button.  When you have auto-show enabled, you only need to click the `>>` button.
+The `auto-show` toggle enables the automatic display of slides to the display.  This is particularly useful when presenting Bible verses and song lyrics: instead of manually previewing each verse and clicking `Show`, you only need to press the the `>>` (next) button and it will auto-show onto the display.
 
-> **NOTE**: This feature can be a little tricky to get used to so be careful when enabling it.  The recommendation is to try it off hours to get a feel for the way it works.
+> **NOTE**: This feature can be a bit tricky until you get used to it - experiment with it outside of live service.
 
 ## Add to queue[#](#add-to-queue)
-The `Add to Queue` button will be talked about more in the [Queue Management](#queue-management) section, but put simply, it's a way to save what you have previewed for display later.  The idea is to prepare for a service where you may present Bible verses, song lyrics, and maybe a few other things and call those things up quickly as needed.  For example, you can search in the `Song Lyrics` tab for the songs being performed, click on a section to preview it, then click `Add to Queue` to _save it_ for later.
+The `Add to Queue` button (covered in detail in the [Queue Management](#queue-management) section) allows you to save the previewed slide for later display.  This is useful when preparing for a service where you are showing a few different songs during worship, Bible verses during the lesson, and slides during intermissions.  Having the slides saved in the queue lets you call up a specific slide quickly.  For example, you might search in the `Song Lyrics` tab for a song, click on a section to preview it, then click `Add to Queue` to _save it_ for later.
 
 ## Presenting Bible verses[#](#presenting-bible-verses)
-Presenting Bible verses is performed using the `Bible` tab in the _display controller_.  
+Presenting Bible verses is controlled from the `Bible` tab in the [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers).
 
 ![presenting bibles tab]({{ page.relpath }}assets/img/present-bible-verses-tab.png){: .rounded .img-fluid}
 
-Presenting Bible verses requires you to select a slide template first (remember a slide template is just a slide with [_placeholders_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component)).
+Presenting Bible verses requires you to select a slide template first (remember a slide template is just a slide with [placeholder]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component)) components.
 
 ![presenting bibles select template]({{ page.relpath }}assets/img/present-bible-verses-template.png){: .rounded .img-fluid}
 
-Once you selected a template, you should see the preview box show the first verse of the selected Bible.  Praisenter allows you to select a primary and secondary Bible.  The primary Bible is used for searching and navigation and the secondary Bible is used to show two versions/translations at one time (provided you've created a slide with the correct placeholders).
+After selecting a template, the preview box will display the first verse of the selected Bible.  Praisenter supports selecting a primary and a secondary Bible.  The primary Bible is used for searching and navigation while the secondary Bible can be used to display two versions/translations simultaneously - provided the selected template has the proper [placeholders]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) configured.
 
 ![presenting bibles select bibles]({{ page.relpath }}assets/img/present-bible-verses-bibles.png){: .rounded .img-fluid}
 
-Once you've chosen the primary Bible you can then use the book, chapter, verse inputs, and the `Find` button to navigate to a verse directly.  The `<<` and `>>` buttons can be used to navigate to the previous or next verse respectively.  You can also use the `Search` button to search the primary Bible.  The numbers showing under the `<<` and `>>` buttons are the number of chapters in the currently selected book and the number of verses in the selected chapter (respectively).
+After selecting a primary Bible, you can jump directly to a verse using the book, chapter, and verse inputs and clicking the `Find` button.  Alternatively, use the `<<` (previous) and `>>` (next) buttons to navigate to the previous and next verse.  The numbers displayed under the `<<` (previous) and `>>` (next) buttons indicate the number of chapters in the selected book and the number of verses in the selected chapter (respectively).  You may also use the `Search` button to [search]({{ page.relpath }}{{ page.presenting_page }}#bible-searching) within the primary Bible.
 
-> **NOTE**: Searching will be discussed later in the manual.
-
-> **NOTE**: Another trick is if you hold down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key while using the `>>` button, Praisenter will append the verses to the slide instead of just going to the next one.
+> **NOTE**: If you hold down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key while using the `>>` (next) button, Praisenter will _append_ the verses to the slide instead of replacing it - allowing you to display multiple verses on one slide.
 
 ![presenting bibles navigation]({{ page.relpath }}assets/img/present-bible-verses-nav.png){: .rounded .img-fluid}
 
-Lastly, as you navigate through the primary Bible, the `Previous verse` and `Next verse` are shown based on the current verse you have selected in the book, chapter, and verse fields.
+As you navigate through a Bible, the `Previous verse` and `Next verse` boxes reflect the previous and next verse of the current verse.
 
 ![presenting bibles previous and next verses]({{ page.relpath }}assets/img/present-bible-verses-prev-next.png){: .rounded .img-fluid}
 
 ## Presenting song lyrics[#](#presenting-song-lyrics)
-Presenting song lyrics is performed on the `Song Lyrics` tab in the _display controller_.
+Presenting song lyrics is controlled from the `Song Lyrics` tab in the [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers).
 
 ![presenting song lyrics tab]({{ page.relpath }}assets/img/present-song-lyrics-tab.png){: .rounded .img-fluid}
 
-Presenting song lyrics requires you to select a slide template first (remember, a slide template is just a slide with [_placeholders_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component)).
+To present song lyrics, first choose a slide template (remember, a slide template is just a slide with [_placeholders_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component)).
 
 ![presenting song lyrics template]({{ page.relpath }}assets/img/present-song-lyrics-template.png){: .rounded .img-fluid}
 
-After selecting the template, you need to find the song you want to present. You do that by using the search.  In the example below, I've searched for a song with the word "song" in it.
-
-> **NOTE**: Searching will be discussed later in the manual.
+Then, [search]({{ page.relpath }}{{ page.presenting_page }}#song-searching) for the song you want to display by typing in a part of the song, the song title, or a matching keyword.
 
 ![presenting song lyrics find]({{ page.relpath }}assets/img/present-song-lyrics-find.png){: .rounded .img-fluid}
 
-Once you've found the song, the primary lyrics will be automatically selected.  You can optionally select a secondary set of lyrics too.  In the example below, it selected the "My Special Song" lyrics.
+Once you find the song, the primary lyrics are selected automatically.  Optionally, you can select a secondary set of lyrics to show two different languages side-by-side - provided the selected template has the proper [placeholders]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) configured.  In the example below, it selected the "My Special Song" lyrics.
 
-> **NOTE**: Remember that a _song lyrics_ item in Praisenter contains multiple sets of _song lyrics_ all in the same document.  This allows you to show the lyrics side-by-side on a slide.
+> **NOTE**: Keep in mind that a [_song_]({{ page.relpath }}{{ page.songs_page }}#lyrics--sections) in Praisenter contains multiple sets of _song lyrics_ in the same document.
 
 ![presenting song lyrics lyric selection]({{ page.relpath }}assets/img/present-song-lyrics-lyrics.png){: .rounded .img-fluid}
 
-Since the primary lyrics are auto-selected, the sections that make up the lyrics are show below as buttons.  For example, in the screenshot below, our sample song only has one section called `Verse 1`.  If the song had many sections, you would see a button for each one.  When you click a section, the slide preview will update with the content from that section.
+Once the primary lyrics are selected, the song's sections appear below as buttons.  In the screenshot below, our sample song only has one section called `Verse 1`.  A button appears for each section in the song.  Clicking a section updates the slide preview with that section's content.
 
 ![presenting song lyrics verses]({{ page.relpath }}assets/img/present-song-lyrics-verses.png){: .rounded .img-fluid}
 
-Finally, at the bottom are the song comments.  Comments that are particularly useful are things like section order or notes for the person who is presenting the song.
+At the bottom, song comments appear.  These may include helpful notes such as section order, presentation instructions, or signal details.
 
 ![presenting song lyrics notes]({{ page.relpath }}assets/img/present-song-lyrics-notes.png){: .rounded .img-fluid}
 
 ## Presenting slides[#](#presenting-slides)
-Presenting slides is performed on the `Slides` tab in the _display controller_.
-
-> **NOTE**: Only slides without [_placeholders_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) will be shown here.
+Presenting slides happens on the `Slides` tab in the [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers).  Only slides _without_ [placeholders]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) will show here.
 
 ![presenting slides tab]({{ page.relpath }}assets/img/present-slides-tab.png){: .rounded .img-fluid}
 
-On the `Slides` tab, you'll see all the slides available to be presented.
+When you click the `Slides` tab, the list of available slides appears.
 
 ![presenting slide list]({{ page.relpath }}assets/img/present-slides-list.png){: .rounded .img-fluid}
 
-If you have a lot of slides, you can use the search feature to search by name or tag to find the slide you are looking for.
+If you have many slides, use the search feature to find the slide by name or tag.
 
 ![presenting slide search]({{ page.relpath }}assets/img/present-slides-search.png){: .rounded .img-fluid}
 
-To preview a slide, just click on it!
+Click a slide to preview it.
 
 ## Presenting notifications[#](#presenting-notifications)
-Notifications are intended to be quick alerts that are overlayed on top of whatever is currently on a display.  These alerts could be things like a reminder or something to get someones attention.  
+Notifications provide quick alerts that overlay on top of whatever content is currently displaying — for example, reminders or announcements meant to draw attention.
 
 ![presenting notifications tab]({{ page.relpath }}assets/img/present-notifications-tab.png){: .rounded .img-fluid}
 
-Next, select the notification slide template to use.
+Start by selecting a slide template.
 
-> **NOTE**: The template chosen should have a [_placeholder_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) component configured with `Type` = `Text` and `Variant` = `Primary`.
+> **NOTE**: The template selected must have a [_placeholder_]({{ page.relpath }}{{ page.slidecomponents_page }}#placeholder-component) component configured with `Type` = `Text` and `Variant` = `Primary`.
 
 ![presenting notifications template]({{ page.relpath }}assets/img/present-notifications-template.png){: .rounded .img-fluid}
 
-Next, enter in the text you would like to have appear on the notification.
+Then enter the text you want to display for the notification.
 
 ![presenting notification text]({{ page.relpath }}assets/img/present-notifications-text.png){: .rounded .img-fluid}
 
-Because notifications are overlayed on top of anything that is currently displaying, the default `Show` and `Hide` controls are _not_ used.  Instead, you use the controls under the notification text field.
+Since notifications overlay existing content, they do not use the standard `Show` and `Hide` buttons. Instead, use the controls located below the notification text field.
 
 ![presenting notification controls]({{ page.relpath }}assets/img/present-notifications-controls.png){: .rounded .img-fluid}
 
 ## Queue Management[#](#queue-management)
-Whenever the [Slide preview](#slide-preview) is showing, you have the ability to _save_ that content to the Queue using the `Add to Queue` button.  Each _disply controller_ has a queue allowing you prepare content for each display independently.  A common scenario is to have song lyrics queued for one display and sermon notes queued for another.  
+Whenever there is a slide in the [preview](#slide-preview), you can _save_ that slide to the queue using the `Add to Queue` button. Each [_display controller_]({{ page.relpath }}{{ page.displays_page }}#display-controllers) has its own queue, allowing you to prepare content independently for each display. A common use case is queuing song lyrics for one display and sermon notes for another.
 
 > **NOTE**: See the [Add to queue](#add-to-queue) section of the manual for more details.
 
 ![presenting queue example]({{ page.relpath }}assets/img/present-queue-ex.png){: .rounded .img-fluid}
 
-You can add as many slides as you need to the queue, but having too many could make it difficult to swap between them.  One way to avoid too many slides in the queue is to only add the _first_.  For example, let's imagine you need to present the Bible verses Matthew 1:1-10.  Instead of adding one slide to the queue for each verse, only add a slide for the first verse.  Now, when you click on that slide in the in queue, the _display controller_ will switch to the `Bibles` tab, set the Bible, book, chapter, and verse.  Now if you need to show the other 9 verses, you just use the `>>` and `Show` buttons!  This applies to song lyrics too, just add a slide for one of the sections in the song and Praisenter will switch the _display controller_ to the `Song Lyrics` tab, set the selected song, and show all the section buttons for you to switch between them.
+You can queue as many slides as you need - but too many may make switching difficult.  To reduce the number of slides added to the queue, only add the _first_.  For example, imagine you need to present the Bible verses Matthew 1:3-10.  Instead of adding one slide for each verse, only add a slide for the _first_ verse.  Then, when you click that queued slide, the display controller will switch to the `Bible` tab, set the selected Bible/book/chapter/verse, and update the preview. To show verse 4, click the `>>` (next) button, then the `Show` button.  This applies to song lyrics as well.  Add a slide for one of the sections in the song and Praisenter will switch the _display controller_ to the `Song Lyrics` tab, set the selected song, and show the section buttons for you.
 
-> **NOTE**: The queue for each display controller will be saved on close of the application.  Praisenter doesn't have an option to save queues (or slide shows) for reuse at this time.
+> **NOTE**: The queue associated with each display controller is saved when you close the application - but there's currently no separate feature for saving and re-loading queues or slide shows for reuse.
 
-> **NOTE**: Praisenter does not have an option to auto-play the queue.  To advance the queue, you must click on the slide and show it manually.
+> **NOTE**: Praisenter does not support auto-playing the slides in the queue. To advance through the queue, you must manually click on each slide and then click `Show`.
 
-As you are adding slides to the queue, you may find you added them in the wrong order.  To re-order them, click and drag the slide to the correct position.  In the example below, I'm moving slide 3 above slide 2.
+If you add slides in the wrong order, you can reorder them by clicking and dragging slides into the desired sequence.  In the example below, slide 3 is being moved above slide 2.
 
 ![presenting queue reorder]({{ page.relpath }}assets/img/present-queue-reorder.png){: .rounded .img-fluid}
 
 ![presenting queue reorder result]({{ page.relpath }}assets/img/present-queue-reorder-result.png){: .rounded .img-fluid}
 
-You can remove slides from the queue by using the <kbd>Delete</kbd> key, the context menu `Delete` option, or the `Remove Selected` and `Remove All` buttons.
+You can remove slides from the queue using the <kbd>Delete</kbd> key, the context menu `Delete` command, or the `Remove Selected` and `Remove All` buttons.
 
-If you want to duplicate a slide, you can use the copy and paste [hotkeys]({{ page.relpath }}{{ page.editing_page }}#hotkeys), the context menu `Copy` and `Paste` options, or hold down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key while dragging a slide.  What's really cool is that you can copy, paste and move slides _between_ display controllers.
+To duplicate a slide, use the copy & paste [hotkeys]({{ page.relpath }}{{ page.editing_page }}#hotkeys), the context menu `Copy` and `Paste` commands, or hold down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key while dragging a slide.  You can also copy, paste and move slides _between_ display controllers.
 
 ![presenting queue move between controllers]({{ page.relpath }}assets/img/present-queue-move-controller.png){: .rounded .img-fluid}
 
 ![presenting queue move between controllers result]({{ page.relpath }}assets/img/present-queue-move-controller-result.png){: .rounded .img-fluid}
 
 ## Bible searching[#](#bible-searching)
-Praisenter provides a flexible bible searching feature to help find verses on the fly.  Click the `Search` button to bring up the search tool.  The seach tool combines the searching and filtering options, a results view, and a detail view when you click on an item in the results view.  The searching and filtering options are at the top, the results view on the left, and the detail view on the right.  
+Praisenter offers a flexible Bible-searching feature to help you quickly find verses. Click the `Search` button to open the search tool.  The tool includes filtering options, a results view, and a detail view for selected results. The filtering and search controls are at the top, search results on the left, and the detailed verse view on the right.
 
 ![presenting bible searching]({{ page.relpath }}assets/img/present-bible-verses-search.png){: .rounded .img-fluid}
 
-When you perform a search, the results will be shown up to 100 matches.  If your search has more than 100 matches you'll see `Found 100+ matching results` in the bottom left corner.  You'll need to refine your search to reduce the number of matches.  When the results display, the words or phrases that matched the search will be highlighted.  In the example above, we searched for "grace" and each verse that matches has the word "grace" underlined and in blue.  The last result (the one that is currently selected) doesn't show the matched word because it's further in the verse.  When you click on the result in the list, the right pane will show the whole chapter and scroll you to the verse that matched.  The item with the blue line on the right is the verse that you clicked on.  It will also show the matched terms.
+When you perform a search, up to 100 matches will be shown.  If there are more than 100, the interface will display the message `Found 100+ matching results` in the bottom-left corner.  At that point, you should refine your search.  In the results list, the words or phrases that matched your search will be highlighted.  In the example above, we searched for "grace" and each verse that matches has the word "grace" underlined and in blue.  The currently selected result (the last result in the screenshot above) doesn't show the matched word in the list view because it appears further in the verse.  When you click on a result, the detail pane on the right will show the full chapter and scrolls to the selected verse - signified by the blue line on the right.
 
-Within the search results you have the `Score`, `Reference`, and the `Text`.  The `Score` represents a _relevancy_ score.  The score is used to show results that might be most relevant to your search.  In the above example, John 1:16 has the highest relevance because it contains the search team twice AND those matched terms are very close to each other.
+The search results include three columns: `Score`, `Reference`, and `Text`. The `Score` is a relevance metric, used to surface the most relevant results first. For example, a verse that matches your search terms more than once (or where the matches are close together) will typically score higher.  Once you find the verse you're looking for, you can double-click the row in the results list or click the reference on the right to select it. The `copy` icon next to the reference will copy both the verse reference and its text to the clipboard.
 
-When you find the verse you are looking for you can either double click the row in the results or click the verse reference link on the left.  The copy icon next to the reference on the left will copy the verse reference and text.
+> **NOTE**: You can append multiple verses by holding down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key when double clicking a result or clicking a reference.
 
-> **NOTE**: You can append multiple verses from the search by holding down the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key when double clicking a result or clicking a reference on the left.
-
-The search tool allows you to search a single Bible at a time and, optionally, limit that search to single a Book.  You can also change how the search works using the `Search type` and `Match type` options.  The default search is to match the `Phrase` `Exact`ly.  Here's a list of the other options and their use:
+The search tool searches one Bible at a time. Optionally, you can restrict the search to a single book.  You can also select among different search modes: `Search type` and `Match type`.  By default, the search is set to `Phrase` + `Exact` match. Below are the available options and how they work:
 
 Search Types:
 
-- `Phrase` - Match on all the words _and_ the order the words were given.
-- `All words` - Match on all the words but order doesn't matter.
-- `Any words` - Match on any word.
+- `Phrase` - Matches all given words in the order provided.
+- `All words` - Matches all the given words,  but order doesn't matter.
+- `Any words` - Matches any of the given words.
 
 Match Types:
 
-- `Exact` - Match the phrase, all words, or any words exactly as provided.
-- `Fuzzy` - Match the phrase, all words, or any words closely and score them based on how close they are to the provided search.
+- `Exact` - Matches words exactly as provided.
+- `Fuzzy` - Matches words approximately and ranks results by closeness.
 
-`Fuzzy` matching is a great way to try to find something that you don't remember exactly how it was phrased or spelled.  Praisenter will use the `Score` to order them based on their closeness to the original search.  In the example below, we searched on `then peter said repent` using a `Fuzzy` `Phrase` search.  It was able to find the verse I was looking for even though I left out two words.
+`Fuzzy` matching is useful when you don't remember the exact phrasing or spelling. When you use a `Fuzzy` + `Phrase` search, Praisenter uses the score to rank results by how closely they match your input. For example, searching for "then peter said repent" returned the correct verse even though two words were omitted.
 
-> **NOTE**: To find what you are looking for quickly, try using `Exact` `All words` before using `Fuzzy`.  most often you'll know some key words and that will be a more effective search.  Use the `Fuzzy` search when exact searching fails.
+> **NOTE**: For faster and more precise results, start with `Exact` + `All words` before switching to `Fuzzy`. Usually you'll know some key words, and that yields better results. Use `Fuzzy` only when exact searching fails.
 
-> **NOTE**: To improve the results of `Fuzzy` searching, you should use uncommon words and longer words.  Using short or common words will cause the search to rank results higher than because of their frequency in the text.  A great example of this is the example below.  See how it highlighted the word `then`?  Well, `then` is very close to my search term `them`.
+> **NOTE**: To improve `Fuzzy` search results, try using uncommon or longer words rather than short or very common words - common words tend to skew results because of their frequency. For instance, in the example below, the word "then" was matched (even though the search word was "them"), underscoring how fuzzy matching can sometimes prioritize frequency over intent.
 
 ![presenting bible searching fuzzy search]({{ page.relpath }}assets/img/present-bible-verses-search-fuzzy.png){: .rounded .img-fluid}
 
 ## Song searching[#](#song-searching)
-Song searching is nearly the same as Bible searching so this section will only call out any differences in behavior.  Please see the section above for basic searching features.
+Song searching works much like Bible searching; see the section above for general search behavior. This section highlights the differences.
 
-Song searching works a little differently to Bible searching due to the types of content that you can search.  In addition to being able to search the song lyrics, Praisenter will also search the song _name_, lyrics _titles_, and _keywords_.  When your search matches one of these items, the `Section` column will display `Metadata` to indicate that a match was detected outside of the song lyrics.
+In addition to searching the lyrics themselves, Praisenter can also search song _names_, _titles_, _keywords_, and more. If a match is found in any of those fields, the `Section` column in the results will show the word `Metadata`, indicating the match was something other than the lyrics.
 
-When you find what you are looking for, the behavior of selecting that item will depend on the search result type.  For example, in the screenshot below, if I double click on the first result, Praisenter will set the Song and Lyrics options and will list the sections on the display controller, but it will not update the slide preview.  This is because the match was the song title, not a section.  However, if the last result is double clicked, Praisenter will set the Song and Lyrics options, list the sections, _AND_ update the slide preview with the content of that section.  If you click the section name on the left, regardless of the result type, Praisenter will update the slide preview.
+Selecting a search result behaves differently depending on what was matched. For instance, if the match was in the song title (metadata) and you double-click the result, Praisenter will set the song and lyrics options and list the song's sections - but it won't update the slide preview.  Praisenter doesn't know what section to preview since the match was on metadata.  If the search result matches a section (not metadata) and you double-click it, Praisenter will set the song and lyrics options, list the sections, and update the preview with that section's content. Alternatively, clicking a section name on the right will update the preview regardless of how you found the song.
 
-> **NOTE**: Song searching does not support appending lyrics using the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key.
+> **NOTE**: Unlike Bible searching, song searching does not support appending multiple lyrics by holding the <kbd>Ctrl</kbd> or <kbd>Command</kbd> key.
 
 ![presenting song searching]({{ page.relpath }}assets/img/present-song-lyrics-search.png){: .rounded .img-fluid}
